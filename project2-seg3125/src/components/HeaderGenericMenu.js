@@ -10,13 +10,13 @@ function HeaderGenericMenu() {
         </div>
         <div className='Generic-Menu-Row'>
             <div className='Menu-Button'>
-                <a href='/'><span class="material-symbols-rounded">person</span></a>
+                <a href='/'><span className="material-symbols-rounded">person</span></a>
             </div>
             <div className='Menu-Button'>
-                <a href='/'><span class="material-symbols-rounded">notifications</span></a>
+                <a href='/'><span className="material-symbols-rounded">notifications</span></a>
             </div>
             <div className='Menu-Button'>
-                <a href='/'><span class="material-symbols-rounded">shopping_cart</span></a>
+                <a href='/'><span className="material-symbols-rounded">shopping_cart</span></a>
             </div>
         </div>
         <div className='Generic-Menu-Row'>

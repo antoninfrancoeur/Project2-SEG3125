@@ -3,9 +3,14 @@
     padding: 5px 20px;
     display: flex;
     align-items: center;
-    border-top-right-radius: 20px; /* Rounded edge in the top right corner */
+    border-top-right-radius: 20px;
     width: fit-content;
     flex-wrap: nowrap;
+}
+
+.breadcrumb-under {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 20px;
 }
 
 .breadcrumb-container > * {

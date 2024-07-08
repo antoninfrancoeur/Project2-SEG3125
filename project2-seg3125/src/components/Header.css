@@ -4,20 +4,32 @@
     display: flex;
     height: 200px;
 }
-  
+
+.Header-Small {
+    height: 140px;
+}
+
 .Title {
     font-family: 'UnifrakturMaguntia', serif;
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    font-size: 68px;
+    font-size: calc(min(68px,5.5vw));
     margin: 16px;
+}
+
+.Title-Small {
+    font-size: 51px;
 }
 
 .Header-Left {
     flex: 11 20;
     position: relative;
-    overflow: hidden;
+}
+
+.Header-Spacing {
+    flex: 1;
+    height: 100%;
 }
 
 .Header-Right {
@@ -59,11 +71,11 @@
 }
 
 .Header-Subtitle.Top {
-    font-size: 32px;
+    font-size: calc(min(32px, 2.5vw));
 }
 
 .Header-Subtitle.Bottom {
-    font-size: 26px;
+    font-size: calc(min(26px, 2vw));
 }
 
 .Header-Nav {
@@ -74,6 +86,11 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+}
+
+.Header-Nav-Under {
+    bottom: unset;
+    top: 100%;
 }
 
 .Generic-Menu-Container {

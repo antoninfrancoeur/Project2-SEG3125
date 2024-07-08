@@ -15,16 +15,29 @@ const Nav = ({ items }) => {
 };
 
 const Nav2 = ({ items }) => {
-    return (
-      <div className="breadcrumb-container2">
-        {items.map((item, index) => (
-          <React.Fragment key={index}>
-            <a href="#/" className="breadcrumb-link">{item}</a>
-            {index < items.length - 1 && <span className="breadcrumb-separator"> / </span>}
-          </React.Fragment>
-        ))}
-      </div>
-    );
-  };
+  return (
+    <div className="breadcrumb-container2">
+    {items.map((item, index) => (
+        <React.Fragment key={index}>
+        <a href="#/" className="breadcrumb-link">{item}</a>
+        {index < items.length - 1 && <span className="breadcrumb-separator"> / </span>}
+        </React.Fragment>
+    ))}
+    </div>
+  );
+};
 
-export {Nav, Nav2};
+const NavUnder = ({ items }) => {
+  return (
+    <div className="breadcrumb-container breadcrumb-under">
+      {items.map((item, index) => (
+        <React.Fragment key={index}>
+          <a href="#/" className="breadcrumb-link">{item}</a>
+          {index < items.length - 1 && <span className="breadcrumb-separator"> &gt; </span>}
+        </React.Fragment>
+      ))}
+    </div>
+  );
+};
+
+export {Nav, Nav2, NavUnder};

@@ -9,7 +9,6 @@ const TextCarousel = ({ text }) => {
   useEffect(() => {
     const textElement = textRef.current;
     const textWidth = textElement.scrollWidth / 3; // because we duplicate the text
-    const containerWidth = textElement.offsetWidth;
     const speed = 75; // pixels per second, adjust as needed
 
     const animationDuration = textWidth / speed;

@@ -23,7 +23,7 @@ function HomeHeader() {
                   <Nav2 items={nav_items2} />
               </div>
           </div>
-          <div class="Vertical-Line"></div>
+          <div className="Vertical-Line"></div>
           <div className="Header-Right">
             <HeaderGenericMenu />
             <div className="Header-Nav">
@@ -32,7 +32,7 @@ function HomeHeader() {
             </div>
           </div>
         </div>
-        <div class="Horizontal-Line"></div>
+        <div className="Horizontal-Line"></div>
       </div>
     );
   }
