@@ -1,17 +1,16 @@
 import Header from "../components/Header";
+import {pageTemplateNav} from '../data.js';
 
-const nav_items = ["Business Concil", "Shop"];
 const title = "The Enchanted \nEmporium"
-
-function Shop() {
+function TemplatePage() {
     return (
       <div>
-        <Header nav_items={nav_items} title={title}/>
-        <div className="Shop">
+        <Header navItems={pageTemplateNav} title={title}/>
+        <div className="TemplatePage">
         </div>
       </div>
     );
   }
   
-  export default Shop;
+  export default TemplatePage;
   

@@ -1,15 +1,25 @@
 import HomeHeader from "../components/HomeHeader";
-
+import {HomeAdvert1, HomeAdvert2} from '../page-components/HomeAdverts'
+import HomePortals from "../page-components/HomePortals";
+import './Home.css'
 
 function Home() {
   return (
     <div>
       <HomeHeader />
       <div className="Home">
-      
+        <div className="main-region">
+          <div className="main-left">
+            <HomeAdvert1 />
+            <HomeAdvert2 />
+          </div>
+          <div className="vertical-line"></div>
+          <div className="main-right">
+            <HomePortals />
+          </div>
+        </div>
       </div>
     </div>
-    
   );
 }
 

@@ -6,7 +6,7 @@ const Nav = ({ items }) => {
     <div className="breadcrumb-container">
       {items.map((item, index) => (
         <React.Fragment key={index}>
-          <a href="#/" className="breadcrumb-link">{item}</a>
+          <a href={item[1]} className="breadcrumb-link">{item[0]}</a>
           {index < items.length - 1 && <span className="breadcrumb-separator"> &gt; </span>}
         </React.Fragment>
       ))}
@@ -19,7 +19,7 @@ const Nav2 = ({ items }) => {
     <div className="breadcrumb-container2">
     {items.map((item, index) => (
         <React.Fragment key={index}>
-        <a href="#/" className="breadcrumb-link">{item}</a>
+        <a href={item[1]} className="breadcrumb-link">{item[0]}</a>
         {index < items.length - 1 && <span className="breadcrumb-separator"> / </span>}
         </React.Fragment>
     ))}
@@ -32,7 +32,7 @@ const NavUnder = ({ items }) => {
     <div className="breadcrumb-container breadcrumb-under">
       {items.map((item, index) => (
         <React.Fragment key={index}>
-          <a href="#/" className="breadcrumb-link">{item}</a>
+          <a href={item[1]}  className="breadcrumb-link">{item[0]} </a>
           {index < items.length - 1 && <span className="breadcrumb-separator"> &gt; </span>}
         </React.Fragment>
       ))}

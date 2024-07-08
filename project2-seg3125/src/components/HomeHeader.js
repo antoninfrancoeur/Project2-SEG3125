@@ -2,11 +2,7 @@ import { Nav, Nav2 } from "./Nav.js";
 import './Header.css';
 import HeaderGenericMenu from "./HeaderGenericMenu.js";
 import TextCarousel from './TextCarousel.js';
-
-const nav_items = ["Society of Wise Wizard", "Foyer Page"];
-const nav_items2 = ["Archives", "News", "Forums", "Report"];
-const nav_items3 = ["Flash News"];
-const currentNews = "Lightning strikes 60 times on Eastern Glumbo Hills. WWD Investigating. ";
+import {pageHomeNav,pageHomeNav2,currentNews,pageHomeNews} from '../data.js';
 
 function HomeHeader() {
     return (
@@ -19,15 +15,15 @@ function HomeHeader() {
                   <span className="Header-Subtitle Bottom">Preserving the Order...</span>
               </div>
               <div className="Header-Nav">
-                  <Nav items={nav_items} />
-                  <Nav2 items={nav_items2} />
+                  <Nav items={pageHomeNav} />
+                  <Nav2 items={pageHomeNav2} />
               </div>
           </div>
           <div className="Vertical-Line"></div>
           <div className="Header-Right">
             <HeaderGenericMenu />
             <div className="Header-Nav">
-              <Nav items={nav_items3} />
+              <Nav items={pageHomeNews} />
               <TextCarousel text={currentNews} />
             </div>
           </div>
