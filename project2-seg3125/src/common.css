@@ -14,3 +14,11 @@ body {
   'opsz' 24;
 }
 
+.links-generic > a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.links-generic > a:hover {
+  text-decoration: underline;
+}

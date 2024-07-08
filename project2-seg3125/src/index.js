@@ -4,7 +4,7 @@ import './common.css';
 import { HashRouter, Route, Routes } from 'react-router-dom'
 
 import Home from './pages/Home';
-import CrystalShop from './pages/CrystalShop';
+import Shop from './pages/Shop';
 import GoblinSightings from './pages/GoblinSightings'
 import SpellArchives from './pages/SpellArchives'
 
@@ -14,7 +14,7 @@ root.render(
     <Routes>
       <Route path='/' element={<Home />}></Route>
       <Route path='/home' element={<Home />}></Route>
-      <Route path='/shop/crystal' element={<CrystalShop />} />
+      <Route path='/shop' element={<Shop />} />
       <Route path='/safety/goblin-sightings' element={<GoblinSightings />} />
       <Route path='/knowledge/spell-archives' element={<SpellArchives />} />
     </Routes>

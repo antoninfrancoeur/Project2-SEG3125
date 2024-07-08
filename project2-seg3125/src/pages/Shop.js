@@ -1,14 +1,16 @@
 import Header from "../components/Header";
-import { pageCrystalShop } from "../data";
+import { pageShop } from "../data";
 import Footer from "../components/Footer";
+import ShopHeader from "../page-components/ShopHeader";
 const title = "The Enchanted \nEmporium"
 
 
 function CrystalShop() {
     return (
       <>
-        <Header nav_items={pageCrystalShop} title={title}/>
+        <Header nav_items={pageShop} title={title}/>
         <div className="Shop">
+          <ShopHeader />
         </div>
         <Footer />
       </>

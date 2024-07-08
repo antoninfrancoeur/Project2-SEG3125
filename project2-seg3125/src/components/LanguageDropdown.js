@@ -12,11 +12,11 @@ const LanguageDropdown = () => {
   return (
     <div className="language-dropdown">
       <span>Language: </span>
-      <div className="dropdown">
-        <div className="dropdown-btn">
+      <div className="language-dropdown">
+        <div className="language-dropdown-btn">
           {selectedLanguage} <i className="material-symbols-rounded">keyboard_arrow_down</i>
         </div>
-        <div className="dropdown-content">
+        <div className="language-dropdown-content">
           {/* Replace with your language options */}
           <div onClick={() => handleChangeLanguage('New English')}>New English</div>
           <div onClick={() => handleChangeLanguage('Old English')}>Old English</div>
