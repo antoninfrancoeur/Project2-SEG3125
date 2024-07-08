@@ -62,6 +62,7 @@
     margin-top: 40px;
     color: #80201A;
     position: relative;
+    box-shadow: 0px 5px 0px 0px #80201a52;
 }
 
 .advert-subcontainer-5 {
@@ -85,4 +86,9 @@
     width: 100px;
     height: fit-content;
     margin: 0 auto;
+    box-shadow: 0px 5px 0px 0px #80201a52;
+}
+
+.advert-button:active {
+    background-color: #531a16;
 }

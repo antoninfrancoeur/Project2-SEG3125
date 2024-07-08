@@ -1,8 +1,9 @@
-import { Nav, Nav2 } from "./Nav.js";
+import { Nav, NavStyle } from "./Nav.js";
 import './Header.css';
 import HeaderGenericMenu from "./HeaderGenericMenu.js";
 import TextCarousel from './TextCarousel.js';
 import {pageHomeNav,pageHomeNav2,currentNews,pageHomeNews} from '../data.js';
+const type = "style2";
 
 function HomeHeader() {
     return (
@@ -16,7 +17,7 @@ function HomeHeader() {
               </div>
               <div className="Header-Nav">
                   <Nav items={pageHomeNav} />
-                  <Nav2 items={pageHomeNav2} />
+                  {/*<NavStyle items={pageHomeNav2} type={type}/>*/}
               </div>
           </div>
           <div className="Vertical-Line"></div>

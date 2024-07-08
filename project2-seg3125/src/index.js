@@ -15,8 +15,8 @@ root.render(
       <Route path='/' element={<Home />}></Route>
       <Route path='/home' element={<Home />}></Route>
       <Route path='/shop/crystal' element={<CrystalShop />} />
-      <Route path='/safety/goblinsightings' element={<GoblinSightings />} />
-      <Route path='/knowledge/spellarchives' element={<SpellArchives />} />
+      <Route path='/safety/goblin-sightings' element={<GoblinSightings />} />
+      <Route path='/knowledge/spell-archives' element={<SpellArchives />} />
     </Routes>
   </HashRouter>
 );

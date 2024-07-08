@@ -1,0 +1,97 @@
+.main-region {
+    width: 100%;
+    display: flex;
+}
+
+.main-left {
+    flex: 11 20;
+    position: relative;
+}
+.main-right {
+    flex: 9 20;
+    position: relative;
+    overflow: hidden;
+}
+
+.vertical-line {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: black;
+}
+
+.center-page {
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 40px;
+    box-sizing: border-box;
+    max-width: 800px;
+    background-color: #F0EAE6;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    font-size: 20px;
+}
+
+.report-title {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+ol.report-list li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+ul.report-list li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+ol.report-list li::marker {
+    font-weight: bold;
+}
+
+.report-bottom-container {
+    margin-top: 20px;
+    height: 50px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.report-button {
+    cursor: pointer;
+    background-color: #80201A;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.report-button > a {
+    color: white;
+    text-decoration: none;
+}
+
+.report-button span {
+    user-select: none;;
+}
+
+.report-button span:hover {
+    text-decoration: underline;
+}
+
+.report-button:active {
+    background-color: #531a16;
+}
+
+.report-bottom-container-space {
+    flex: 1;
+}
+
+.report-text-input {
+
+}

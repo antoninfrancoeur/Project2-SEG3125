@@ -59,7 +59,7 @@
 .Subtitle-Box {
     position: absolute;
     right: 20px;
-    top: 90px;
+    bottom: 20px; /*top: 90px;*/
 }
 
 .Header-Subtitle {

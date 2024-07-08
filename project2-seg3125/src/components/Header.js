@@ -4,7 +4,7 @@ import HeaderGenericMenu from "./HeaderGenericMenu.js";
 
 const Header = ({title, nav_items}) => {
     return (
-      <div>
+      <>
         <div className="Header Header-Small">
           <div className="Header-Left">
               <h1 className="Title Title-Small" style={{ whiteSpace: "pre-line" }}>{title}</h1>
@@ -17,7 +17,7 @@ const Header = ({title, nav_items}) => {
           </div>
         </div>
         <div className="Horizontal-Line"></div>
-      </div>
+      </>
     );
   }
   

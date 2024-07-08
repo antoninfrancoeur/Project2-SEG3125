@@ -14,9 +14,9 @@ const Nav = ({ items }) => {
   );
 };
 
-const Nav2 = ({ items }) => {
+const NavStyle = ({ items, type }) => {
   return (
-    <div className="breadcrumb-container2">
+    <div className={"breadcrumb-container-" + type}>
     {items.map((item, index) => (
         <React.Fragment key={index}>
         <a href={item[1]} className="breadcrumb-link">{item[0]}</a>
@@ -40,4 +40,4 @@ const NavUnder = ({ items }) => {
   );
 };
 
-export {Nav, Nav2, NavUnder};
+export {Nav, NavStyle, NavUnder};

@@ -1,11 +1,12 @@
+import Footer from "../components/Footer";
 import HomeHeader from "../components/HomeHeader";
 import {HomeAdvert1, HomeAdvert2} from '../page-components/HomeAdverts'
 import HomePortals from "../page-components/HomePortals";
-import './Home.css'
+import './Pages.css'
 
 function Home() {
   return (
-    <div>
+    <>
       <HomeHeader />
       <div className="Home">
         <div className="main-region">
@@ -19,7 +20,8 @@ function Home() {
           </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 
