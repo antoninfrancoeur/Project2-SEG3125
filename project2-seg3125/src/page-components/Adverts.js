@@ -1,7 +1,7 @@
-import './HomeAdverts.css'
+import './Adverts.css'
 import { linkToShop, linkToRentAWizard } from '../data';
 
-function HomeAdvert1() {
+export function HomeAdvert1() {
   return (
     <div className='advert-container-1'>
       <div className='advert-subcontainer-1'>
@@ -19,7 +19,7 @@ function HomeAdvert1() {
   );
 }
 
-function HomeAdvert2() {
+export function HomeAdvert2() {
   return (
     <div className='advert-container-2'>
       <div className='advert-subcontainer-4'>
@@ -35,4 +35,11 @@ function HomeAdvert2() {
   );
 }
 
-export {HomeAdvert1, HomeAdvert2};
+export function ShopAdvert1() {
+  return (
+    <div className='advert-container-1'>
+      <div style={{width:'300px'}}><h1>In need of a new Crystal ball?</h1></div>
+      <div style={{width:'400px', marginLeft:'20px'}}><p><b>We forage only the purest crystals, with best wood one can get in these lands.</b><br /><br />Pick the crystal ball best suited for you using our various filters.</p></div>
+    </div>
+  );
+}

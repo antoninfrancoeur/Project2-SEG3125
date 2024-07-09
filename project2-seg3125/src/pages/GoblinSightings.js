@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import {goblinSightingsNav} from '../data';
+import {goblinSightingsNav, linkToHome} from '../data';
 import {GoblinReport} from '../page-components/GoblinReport';
 import React, { useState } from 'react';
 import './Pages.css';
@@ -55,7 +55,7 @@ function GoblinSightings() {
     else if(index > maxPage) {
       return (
         <div className="report-button">
-          <a href="/#/"><span>Return to home page.</span></a>
+          <a href={linkToHome}><span>Return to home page.</span></a>
         </div>
       );
     }

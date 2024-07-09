@@ -75,6 +75,47 @@ export const shopSections = [
   }
 ];
 
+export const crystalFilters = [
+  {
+    'name':'Diameter',
+    "items": [
+      ['15 cm', '15-cm'],
+      ['18 cm', '18-cm'],
+      ['20 cm', '20-cm'],
+      ['22 cm', '22-cm'],
+      ['25 cm', '25-cm'],
+    ]
+  },
+  {
+    'name':'Crystal Type',
+    'items':[
+      ['Thaumatite', 'thaumatite'],
+      ['Yilaster', 'yilaster'],
+      ['Amisite', 'amisite'],
+      ['Infused Quartz', 'infused-quartz'],
+      ['Infused Obsidian', 'infused-obsidian'],
+    ]
+  },
+  {
+    'name':'Base Type',
+    'items':[
+      ['Old Oak', 'old-oak'],
+      ['Old Pine', 'old-pine'],
+      ['Maple', 'maple'],
+    ]
+  },
+  {
+    'name':'Aura',
+    'items':[
+      ['Chill', 'chill'],
+      ['Ominous', 'ominous'],
+      ['Spooky', 'spooky'],
+      ['Warm', 'warm'],
+      ['Freaky', 'freaky'],
+    ]
+  }
+];
+
 export const currentNews = "Lightning strikes 60 times on Eastern Glumbo Hills. WWD Investigating. ";
 
 export const pageTemplateNav = [["Home", '/Project2-SEG3125/#/'], ["Knowledge", '/Project2-SEG3125/#/'], ["Spell Archives", '/Project2-SEG3125/#/']];
@@ -87,6 +128,7 @@ export const footerNav2 = [["Legal", '/Project2-SEG3125/#/'], ["Sitemap", '/Proj
 export const goblinSightingsNav = [["Home", '/Project2-SEG3125/#/'], ["Safety", '/Project2-SEG3125/#/'], ["Goblin Sightings", '/Project2-SEG3125/#/safety/goblin-sightings']];
 export const pageShop = [["Home", '/Project2-SEG3125/#/'], ["Business Concil", '/Project2-SEG3125/#/'], ["Shop", '/Project2-SEG3125/#/shop/']];
 
+export const linkToHome = '/Project2-SEG3125/#/';
 export const linkToPortals = '/Project2-SEG3125/#/';
 export const linkToShop = '/Project2-SEG3125/#/shop/';
 export const linkToRentAWizard = '/Project2-SEG3125/#/';

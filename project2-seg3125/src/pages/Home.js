@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 import HomeHeader from "../components/HomeHeader";
-import {HomeAdvert1, HomeAdvert2} from '../page-components/HomeAdverts'
+import {HomeAdvert1, HomeAdvert2} from '../page-components/Adverts'
 import HomePortals from "../page-components/HomePortals";
 import './Pages.css'
 
