@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Project2-SEG3125/static/css/main.d923857f.css",
-    "main.js": "/Project2-SEG3125/static/js/main.78835450.js",
+    "main.css": "/Project2-SEG3125/static/css/main.306341fa.css",
+    "main.js": "/Project2-SEG3125/static/js/main.65de6a8c.js",
     "static/media/crystal_ball_icon.jpg": "/Project2-SEG3125/static/media/crystal_ball_icon.6001fab06356e274b9d7.jpg",
     "index.html": "/Project2-SEG3125/index.html",
-    "main.d923857f.css.map": "/Project2-SEG3125/static/css/main.d923857f.css.map",
-    "main.78835450.js.map": "/Project2-SEG3125/static/js/main.78835450.js.map"
+    "main.306341fa.css.map": "/Project2-SEG3125/static/css/main.306341fa.css.map",
+    "main.65de6a8c.js.map": "/Project2-SEG3125/static/js/main.65de6a8c.js.map"
   },
   "entrypoints": [
-    "static/css/main.d923857f.css",
-    "static/js/main.78835450.js"
+    "static/css/main.306341fa.css",
+    "static/js/main.65de6a8c.js"
   ]
 }
