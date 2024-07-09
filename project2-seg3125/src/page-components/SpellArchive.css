@@ -1,0 +1,173 @@
+.spell-search-container {
+  margin-top: 40px;
+  padding: 20px;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-label {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.spell-results-container {
+  padding-left: 20px;
+  padding-top: 20px;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.spell-result {
+  height: 180px;
+  background-color: #F0EAE6;
+  border-top-left-radius: 40px;
+  position: relative;
+  padding: 20px;
+  padding-bottom: 55px;
+  box-sizing: border-box;
+}
+
+.spell-result-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.spell-result-label {
+  font-size: 16px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.spell-result:not(:first-child) {
+  margin-top: -30px;
+  box-shadow: #d9ccc3 -5px -5px 20px 0px;
+}
+
+.spell-result:last-child {
+  border-bottom-left-radius: 40px;
+}
+
+.spell-button-container {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.spell-button {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.spell-button:hover {
+  text-decoration: underline;
+}
+
+.spell-tags-container {
+  position: absolute;
+  top: 55px;
+  bottom: 55px;
+  display: flex;
+}
+
+.spell-tags-container {
+  position: absolute;
+  top: 110px;
+  display: flex;
+  height: min-content;
+  width: calc(100% - 40px);
+  overflow-x: hidden;
+}
+
+.spell-tags-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0px;
+  height: 100%;
+  width: 40px;
+  background: linear-gradient(to left, #f0eae6, #f0eae600);
+  pointer-events: none; 
+}
+
+.tag {
+  display: inline-block;
+  background-color: #A70000;
+  color: white; /* Text color for better contrast */
+  padding: 5px 15px; /* Adjust padding as needed */
+  border-radius: 999px; /* Large value for pill shape */
+  font-size: 14px; /* Adjust font size as needed */
+  font-weight: bold; /* Optional: make text bold */
+  text-align: center; /* Center the text */
+  white-space: nowrap; /* Prevent text from wrapping */
+  box-sizing: content-box;
+  height: 16px;
+}
+
+.tag:not(:last-child) {
+  margin-right: 10px;
+}
+
+.spell-search-button-container {
+  margin-top: 15px;
+  display: flex;
+}
+
+.spell-search-button {
+  width: 100%;
+  padding: 10px 15px 10px 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #F0EAE6;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  user-select: none;
+}
+
+.spell-search-button:hover {
+  text-decoration: underline;
+}
+
+.spell-compare {
+  margin-right: 15px;
+  background-color: #F0EAE6;
+  color: black;
+  flex: 5 7;
+}
+
+.spell-search {
+  background-color: #A70000;
+  color: #F0EAE6;
+  flex: 3 7;
+}
+
+.spell-search:active {
+  background-color: #7a0000;
+}
+
+.spell-compare:active {
+  background-color: #e4dad1;
+}
+
+input[type="checkbox"] {
+  accent-color: #A70000;
+}
+
+.spell-tags-container-2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 5px;
+}

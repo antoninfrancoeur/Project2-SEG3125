@@ -116,6 +116,17 @@ export const crystalFilters = [
   }
 ];
 
+export const schoolsOfMagic = [
+  ['Evocation','evocation'],
+  ['Conjuration','conjuration'],
+  ['Illusion','illusion'],
+  ['Necromancy','necromancy'],
+  ['Transmutation','transmutation'],
+  ['Divination','divination'],
+  ['Enchantment','enchantment'],
+  ['Abjuration','abjuration'],
+];
+
 export const currentNews = "Lightning strikes 60 times on Eastern Glumbo Hills. WWD Investigating. ";
 
 export const pageTemplateNav = [["Home", '/Project2-SEG3125/#/'], ["Knowledge", '/Project2-SEG3125/#/'], ["Spell Archives", '/Project2-SEG3125/#/']];

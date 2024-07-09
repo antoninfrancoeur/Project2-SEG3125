@@ -6,6 +6,7 @@
     border-top-right-radius: 20px;
     width: fit-content;
     flex-wrap: nowrap;
+    z-index: 5;
 }
 
 .breadcrumb-under {
