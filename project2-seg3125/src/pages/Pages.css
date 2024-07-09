@@ -151,7 +151,7 @@ ol.report-list li::marker {
 .shop-item-card {
   background: #E5DBD5;
   width: 300px;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 5 / 7;
   box-sizing: content-box;
   border-radius: 20px;
   position: relative;
@@ -181,7 +181,7 @@ ol.report-list li::marker {
 
 .shop-item-card-bg {
   position: absolute;
-  bottom: 5%;
+  top: -7.5%;
   left: 0;
   width: 100%;
 }
@@ -189,10 +189,14 @@ ol.report-list li::marker {
 .shop-item-card-overlay {
   box-sizing: content-box;
   padding: 20px;
+  height: 180px;
   position: absolute;
   bottom: 0;
   z-index: 1;
   background: #E5DBD5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .flex-space {

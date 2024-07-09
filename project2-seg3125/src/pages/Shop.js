@@ -14,8 +14,10 @@ const ShopItem = ({item}) => {
       <div className="shop-item-card">
         <img className="shop-item-card-bg" src={crystal_img} alt=""/>
         <div className="shop-item-card-overlay">
-          <p className="shop-item-title">{item.title}</p>
-          <p className="shop-item-label">{item.description}</p>
+          <div>
+            <p className="shop-item-title">{item.title}</p>
+            <p className="shop-item-label">{item.description}</p>
+          </div>
           <div className="flex-space">
             <span className="shop-item-price">{item.price} coins</span>
             <span className="shop-item-btn links-generic"><a href={linkToShop}>Buy now &gt;&gt;</a></span>
@@ -103,7 +105,7 @@ function Shop() {
         </form>
         <div className="shop-container">
           <ShopItem item={crystalBallsItems[0]} />
-          <ShopItem item={crystalBallsItems[0]} />
+          <ShopItem item={crystalBallsItems[1]} />
           <ShopItem item={crystalBallsItems[0]} />
           <ShopItem item={crystalBallsItems[0]} />
           <ShopItem item={crystalBallsItems[0]} />
