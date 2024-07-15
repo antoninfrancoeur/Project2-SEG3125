@@ -28,6 +28,7 @@
   bottom: 0;
   width: 2px;
   background-color: black;
+  box-shadow: #3100007a 0 0 7px 0px;
 }
 
 .center-page {

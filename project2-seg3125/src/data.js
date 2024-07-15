@@ -42,7 +42,7 @@ export const homePortalSections = [
     "name": "Community",
     "icon": "forum",
     "items": [
-      ['Wizard Forum', '/Project2-SEG3125/#/'],
+      ['Wizard Forum', '/Project2-SEG3125/#/forum'],
       ['See more...', '/Project2-SEG3125/#/'],
     ]
   }
@@ -138,8 +138,12 @@ export const footerNav = [["Privacy Policy", '/Project2-SEG3125/#/'], ["Report A
 export const footerNav2 = [["Legal", '/Project2-SEG3125/#/'], ["Sitemap", '/Project2-SEG3125/#/'], ["Report Bug", '/Project2-SEG3125/#/']];
 export const goblinSightingsNav = [["Home", '/Project2-SEG3125/#/'], ["Safety", '/Project2-SEG3125/#/'], ["Goblin Sightings", '/Project2-SEG3125/#/safety/goblin-sightings']];
 export const pageShop = [["Home", '/Project2-SEG3125/#/'], ["Business Concil", '/Project2-SEG3125/#/'], ["Shop", '/Project2-SEG3125/#/shop/']];
+export const pageForumNav = [["Home", '/Project2-SEG3125/#/'], ["Community", '/Project2-SEG3125/#/'], ["Forum", '/Project2-SEG3125/#/forum']];
 
 export const linkToHome = '/Project2-SEG3125/#/';
 export const linkToPortals = '/Project2-SEG3125/#/';
 export const linkToShop = '/Project2-SEG3125/#/shop/';
 export const linkToRentAWizard = '/Project2-SEG3125/#/';
+export const linkToRentForum = '/Project2-SEG3125/#/forum';
+
+export const forumMainNav = [["Forum", ''], ["Main", '']];

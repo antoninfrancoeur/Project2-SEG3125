@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import GoblinSightings from './pages/GoblinSightings'
 import SpellArchives from './pages/SpellArchives'
+import WizardForum from './pages/WizardForum'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,7 @@ root.render(
       <Route path='/shop/*' element={<Shop />} />
       <Route path='/safety/goblin-sightings' element={<GoblinSightings />} />
       <Route path='/knowledge/spell-archives' element={<SpellArchives />} />
+      <Route path='/forum' element={<WizardForum />} />
     </Routes>
   </HashRouter>
 );

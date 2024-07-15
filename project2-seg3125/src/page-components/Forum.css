@@ -1,0 +1,149 @@
+.forum-page {
+  margin: 0 auto;
+  margin-top: 80px;
+  box-sizing: border-box;
+  max-width: 1000px;
+  background-color: #F0EAE6;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  height: calc(100% - 80px);
+}
+
+.forum-page-header {
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.forum-title {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.forum-main {
+  position: relative;
+  flex: 1;
+}
+
+.forum-sidebar {
+  width: 400px;
+}
+
+.forum-sidebar-container {
+  margin-top: 40px;
+  padding: 20px;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.forum-label {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.forum-container {
+  display: flex;
+}
+
+.forum-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.forum-row-divider {
+  width: 100%;
+  background-color: #F0EAE6;
+  height: 2px;
+  box-sizing: border-box;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+}
+
+
+.forum-list-container > ul {
+  list-style-type: none;
+}
+
+.forum-list-container > ul > li {
+  position: relative;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.forum-list-container > ul > li::before {
+  content: '>';
+  font-weight: bold;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  padding-right: 10px; /* Space between arrow and text */
+}
+
+.forum-list-container > ul > li:hover {
+  text-decoration: underline;
+}
+
+.post-container {
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 75px;
+  overflow-y: hidden;
+  display: flex;
+}
+
+.post-user-square {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.post-user-icon {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.forum-message-divider {
+  width: 100%;
+  background-color: #D9CCC3;
+  height: 2px;
+  box-sizing: border-box;
+}
+
+.forum-post-row {
+  display: flex;
+  column-gap: 20px;
+  width: 100%;
+}
+
+.vertical-pad {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.expand {
+  flex: 1;
+}
+.width-55 {
+  width: 55px;
+}
+.width-150 {
+  width: 150px;
+}
+.width-200 {
+  width: 200px;
+}
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+}

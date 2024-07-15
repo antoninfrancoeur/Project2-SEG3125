@@ -1,6 +1,5 @@
 .Header {
     width: 100%;
-    background-color: #D9CCC3;
     display: flex;
     height: 200px;
 }
@@ -16,6 +15,7 @@
     font-display: swap;
     font-size: calc(min(68px,5.5vw));
     margin: 16px;
+    text-shadow: 0px 0px 5px #3100007a;
 }
 
 .Title-Small {
@@ -44,6 +44,7 @@
     bottom: 0;
     width: 2px;
     background-color: black;
+    box-shadow: #3100007a 0 0 7px 0px;
     height: 100%;
 }
 
@@ -53,6 +54,7 @@
     bottom: 0;
     height: 2px;
     background-color: black;
+    box-shadow: #3100007a 0 0 7px 0px;
     width: 100%;
 }
 
@@ -64,6 +66,7 @@
 
 .Header-Subtitle {
     color: #7F201A;
+    text-shadow: 0px 0px 5px #31000025;
     text-align: right;
     width: 100%;
     display: block;

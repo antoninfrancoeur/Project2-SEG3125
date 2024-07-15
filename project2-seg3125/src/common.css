@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: "Lusitana", serif;
   background-color: #D9CCC3;
+  background-image: url('./assets/bg-texture.jpg');
   color: black;
 }
 

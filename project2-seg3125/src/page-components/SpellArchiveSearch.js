@@ -61,7 +61,9 @@ const SchoolsFilter = ({ items }) => {
   );
 };
 
-
+const Division = () => {return(
+  <div className='search-row-divider'></div>
+)};
 
 function SpellArchivesSearch() {
   return (
@@ -75,14 +77,17 @@ function SpellArchivesSearch() {
         <div className='spell-search-button spell-search'>Search</div>
       </div>
 
+      <Division />
       <p className='search-label'>Search Type</p>
       <SlideOptionPicker options={["Spells", "Books", "Tags"]} />
 
+      <Division />
       <p className='search-label'>Schools of Magic</p>
       <form>
         <SchoolsFilter items={schoolsOfMagic}/>
       </form>
 
+      <Division />
       <p className='search-label'>Current Tags</p>
       <div className='spell-tags-container-2'>
         <div className="tag">Level I</div>
@@ -90,17 +95,6 @@ function SpellArchivesSearch() {
         <div className="tag">Level III</div>
         <div className="tag">Level IV</div>
         <div className="tag">Level V</div>
-        <div className="tag">Level VI</div>
-        <div className="tag">Level VI</div>
-        <div className="tag">Level VI</div>
-        <div className="tag">Level VI</div>
-        <div className="tag">Level VI</div>
-        <div className="tag">Level VI</div>
-        <div className="tag">Level VI</div>
-        <div className="tag">Level VI</div>
-        <div className="tag">Level VI</div>
-        <div className="tag">Level VI</div>
-        <div className="tag">Level VI</div>
         <div className="tag">Level VI</div>
       </div>
     </div>

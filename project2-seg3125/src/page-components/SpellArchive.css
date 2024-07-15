@@ -8,7 +8,7 @@
 
 .search-label {
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 
@@ -170,4 +170,14 @@ input[type="checkbox"] {
   flex-wrap: wrap;
   width: 100%;
   row-gap: 5px;
+}
+
+.search-row-divider {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  background-color: #F0EAE6;
+  height: 2px;
 }

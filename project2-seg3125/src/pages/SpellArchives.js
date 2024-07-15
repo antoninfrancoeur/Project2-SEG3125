@@ -5,7 +5,7 @@ import SpellArchivesSearch from "../page-components/SpellArchiveSearch.js";
 import SpellArchivesResults from "../page-components/SpellArchiveResults.js";
 
 
-const title = "The Wizard Spell \nArchives"
+const title = "The Wizard Spell \nArchives";
 function SpellArchives() {
   return (
     <>
