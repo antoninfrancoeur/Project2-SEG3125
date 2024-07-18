@@ -23,6 +23,7 @@
 a.breadcrumb-link {
     text-decoration: none;
     text-wrap: nowrap;
+    text-overflow: clip;
 }
 
 a.breadcrumb-link:hover {

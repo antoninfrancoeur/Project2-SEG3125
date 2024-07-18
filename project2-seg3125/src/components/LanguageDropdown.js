@@ -1,26 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './LanguageDropdown.css'; // Import CSS file for styling
+import { useT } from "talkr";
+
+export var lang = "en";
+const options = {
+  "en":"English",
+  "pirate":"Pirate Slang",
+  "fr":"Français"
+};
 
 const LanguageDropdown = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState('New English'); // State to manage selected language
+  const { T, locale, setLocale } = useT();
 
+
+  const [selectedLanguage, setSelectedLanguage] = useState('en');
   const handleChangeLanguage = (language) => {
     setSelectedLanguage(language);
-    // You can implement language change logic here
+    setLocale(language);
   };
 
   return (
     <div className="language-dropdown">
-      <span>Language: </span>
+      <span>{T("language-label")}</span>
       <div className="language-dropdown">
         <div className="language-dropdown-btn">
-          {selectedLanguage} <i className="material-symbols-rounded">keyboard_arrow_down</i>
+          {options[locale]} <i className="material-symbols-rounded">keyboard_arrow_down</i>
         </div>
         <div className="language-dropdown-content">
-          {/* Replace with your language options */}
-          <div onClick={() => handleChangeLanguage('New English')}>New English</div>
-          <div onClick={() => handleChangeLanguage('Old English')}>Old English</div>
-          <div onClick={() => handleChangeLanguage('New French')}>New French</div>
+          <div onClick={() => handleChangeLanguage('en')}>{options.en}</div>
+          <div onClick={() => handleChangeLanguage('pirate')}>{options.pirate}</div>
+          <div onClick={() => handleChangeLanguage('fr')}>{options.fr}</div>
         </div>
       </div>
     </div>

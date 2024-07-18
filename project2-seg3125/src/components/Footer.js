@@ -1,8 +1,11 @@
 import './Footer.css';
 import { NavStyle } from './Nav';
 import {footerNav, footerNav2} from '../data'
+import { useT } from "talkr";
 
 function Footer() {
+  const { T } = useT();
+
   return (
     <>
       <div className="horizontal-line"></div>
@@ -15,7 +18,7 @@ function Footer() {
           <div className='footer-inline-display'>
             <p><b>© 802-2024</b></p>
             <div className='footer-spacer'></div>
-            <p><b>SOCIETY OF WISE WIZARDS</b></p>
+            <p><b>{T("footer.title")}</b></p>
           </div>
         </div>
       </footer>

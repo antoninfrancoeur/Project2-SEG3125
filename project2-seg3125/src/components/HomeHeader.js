@@ -3,36 +3,40 @@ import './Header.css';
 import HeaderGenericMenu from "./HeaderGenericMenu.js";
 import TextCarousel from './TextCarousel.js';
 import {pageHomeNav,pageHomeNav2,currentNews,pageHomeNews} from '../data.js';
+import { useT } from "talkr";
+
 const type = "style2";
 
 function HomeHeader() {
-    return (
-      <div>
-        <div className="Header">
-          <div className="Header-Left">
-              <h1 className="Title">Society of Wise<br />Wizards</h1>
-              <div className="Subtitle-Box">
-                  <span className="Header-Subtitle Top">Mastering the Arcane,<br /></span>
-                  <span className="Header-Subtitle Bottom">Preserving the Order...</span>
-              </div>
-              <div className="Header-Nav">
-                  <Nav items={pageHomeNav} />
-                  {/*<NavStyle items={pageHomeNav2} type={type}/>*/}
-              </div>
-          </div>
-          <div className="Vertical-Line"></div>
-          <div className="Header-Right">
-            <HeaderGenericMenu />
-            <div className="Header-Nav">
-              <Nav items={pageHomeNews} />
-              <TextCarousel text={currentNews} />
+  const { T } = useT();
+
+  return (
+    <div>
+      <div className="Header">
+        <div className="Header-Left">
+            <h1 className="Title">{T("title")}</h1>
+            <div className="Subtitle-Box">
+                <span className="Header-Subtitle Top">{T("subtitle.first")}<br /></span>
+                <span className="Header-Subtitle Bottom">{T("subtitle.second")}</span>
             </div>
+            <div className="Header-Nav">
+                <Nav items={pageHomeNav} />
+                {/*<NavStyle items={pageHomeNav2} type={type}/>*/}
+            </div>
+        </div>
+        <div className="Vertical-Line"></div>
+        <div className="Header-Right">
+          <HeaderGenericMenu />
+          <div className="Header-Nav">
+            <Nav items={pageHomeNews} />
+            <TextCarousel text={T("other.sample-news")} />
           </div>
         </div>
-        <div className="Horizontal-Line"></div>
       </div>
-    );
-  }
-  
-  export default HomeHeader;
+      <div className="Horizontal-Line"></div>
+    </div>
+  );
+}
+
+export default HomeHeader;
   

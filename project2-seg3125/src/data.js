@@ -127,18 +127,16 @@ export const schoolsOfMagic = [
   ['Abjuration','abjuration'],
 ];
 
-export const currentNews = "Lightning strikes 60 times on Eastern Glumbo Hills. WWD Investigating. ";
-
-export const pageTemplateNav = [["Home", '/Project2-SEG3125/#/'], ["Knowledge", '/Project2-SEG3125/#/'], ["Spell Archives", '/Project2-SEG3125/#/']];
-export const pageSpellArchiveNav = [["Home", '/Project2-SEG3125/#/'], ["Knowledge", '/Project2-SEG3125/#/'], ["Spell Archives", '/Project2-SEG3125/#/']];
-export const pageHomeNav = [["Society of Wise Wizard", '/Project2-SEG3125/#/'], ["Home", '/Project2-SEG3125/#/']];
-export const pageHomeNav2 = [["Archives", '/Project2-SEG3125/#/'], ["News", '/Project2-SEG3125/#/'], ["Forums", '/Project2-SEG3125/#/'], ["Report", '/Project2-SEG3125/#/']];
-export const pageHomeNews = [["Flash News", '/Project2-SEG3125/#/']];
-export const footerNav = [["Privacy Policy", '/Project2-SEG3125/#/'], ["Report Abuse", '/Project2-SEG3125/#/'], ["Contact Us", '/Project2-SEG3125/#/']];
-export const footerNav2 = [["Legal", '/Project2-SEG3125/#/'], ["Sitemap", '/Project2-SEG3125/#/'], ["Report Bug", '/Project2-SEG3125/#/']];
-export const goblinSightingsNav = [["Home", '/Project2-SEG3125/#/'], ["Safety", '/Project2-SEG3125/#/'], ["Goblin Sightings", '/Project2-SEG3125/#/safety/goblin-sightings']];
-export const pageShop = [["Home", '/Project2-SEG3125/#/'], ["Business Concil", '/Project2-SEG3125/#/'], ["Shop", '/Project2-SEG3125/#/shop/']];
-export const pageForumNav = [["Home", '/Project2-SEG3125/#/'], ["Community", '/Project2-SEG3125/#/'], ["Forum", '/Project2-SEG3125/#/forum']];
+export const pageTemplateNav = [["home", '/Project2-SEG3125/#/'], ["knowledge", '/Project2-SEG3125/#/'], ["spell-archives", '/Project2-SEG3125/#/']];
+export const pageSpellArchiveNav = [["home", '/Project2-SEG3125/#/'], ["knowledge", '/Project2-SEG3125/#/'], ["spell-archives", '/Project2-SEG3125/#/']];
+export const pageHomeNav = [["title", '/Project2-SEG3125/#/'], ["home", '/Project2-SEG3125/#/']];
+export const pageHomeNav2 = [["archives", '/Project2-SEG3125/#/'], ["news", '/Project2-SEG3125/#/'], ["forums", '/Project2-SEG3125/#/'], ["report", '/Project2-SEG3125/#/']];
+export const pageHomeNews = [["flash-news", '/Project2-SEG3125/#/']];
+export const footerNav = [["privacy-policy", '/Project2-SEG3125/#/'], ["report-abuse", '/Project2-SEG3125/#/'], ["contact-us", '/Project2-SEG3125/#/']];
+export const footerNav2 = [["legal", '/Project2-SEG3125/#/'], ["sitemap", '/Project2-SEG3125/#/'], ["report-bug", '/Project2-SEG3125/#/']];
+export const goblinSightingsNav = [["home", '/Project2-SEG3125/#/'], ["safety", '/Project2-SEG3125/#/'], ["goblin-sightings", '/Project2-SEG3125/#/safety/goblin-sightings']];
+export const pageShop = [["home", '/Project2-SEG3125/#/'], ["business-concil", '/Project2-SEG3125/#/'], ["shop", '/Project2-SEG3125/#/shop/']];
+export const pageForumNav = [["home", '/Project2-SEG3125/#/'], ["community", '/Project2-SEG3125/#/'], ["forum", '/Project2-SEG3125/#/forum']];
 
 export const linkToHome = '/Project2-SEG3125/#/';
 export const linkToPortals = '/Project2-SEG3125/#/';
@@ -146,4 +144,4 @@ export const linkToShop = '/Project2-SEG3125/#/shop/';
 export const linkToRentAWizard = '/Project2-SEG3125/#/';
 export const linkToRentForum = '/Project2-SEG3125/#/forum';
 
-export const forumMainNav = [["Forum", ''], ["Main", '']];
+export const forumMainNav = [["forum", ''], ["main", '']];
