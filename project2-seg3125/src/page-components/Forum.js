@@ -1,14 +1,20 @@
 import { NavUnder } from '../components/Nav.js';
 import './Forum.css';
-import {forumMainNav} from '../data.js'
-import profileIcon from '../assets/profile0.png';
+import {forumMainNav, linkToCreatePost, linkToForum} from '../data.js'
+import profileIcon0 from '../assets/profile0.png';
+import profileIcon1 from '../assets/profile1.png';
 import { useT } from "talkr";
+import {TextFieldInput, TextLineFieldInput} from '../components/TextFieldInput';
+
+const titleLimit = 60;
+const postLimit = 2000;
 
 const samplePost = {
   title: "What school of magic should I start learning?",
   username: "Hopii THE Wizard Man",
   lastPostUsername: "Sticki",
-  icon: profileIcon,
+  link: "/general/wiz-101/what-school-of-magic-should-i-start-learning",
+  icon: profileIcon0,
   replyCount: 15,
   viewCount: 230,
   lastPostTime: "Jun 25, 2024, 02:56 AM",
@@ -63,7 +69,7 @@ const LocaleDateToString = (locale, date) => {
   }
 };
 
-const ForumPost = ({post: {title, icon, username, replyCount, viewCount, lastPostUsername, lastPostTime}}) => {
+const ForumPost = ({post: {title, icon, username, link, replyCount, viewCount, lastPostUsername, lastPostTime}}) => {
   const { T, locale } = useT();
   const date = new Date(lastPostTime);
   const formattedDate = LocaleDateToString(locale, date);
@@ -77,7 +83,7 @@ const ForumPost = ({post: {title, icon, username, replyCount, viewCount, lastPos
             <img className='post-user-icon' src={icon} alt='Profile'/>
           </div>
           <div className='expand flex-vertical'>
-            <div><b>{title}</b></div>
+            <div className='links-generic'><a href={linkToForum + link}><b>{title}</b></a></div>
             <div>{T('forum.details.by') + username}</div>
           </div>
           <div className='width-150 flex-vertical'>
@@ -94,8 +100,67 @@ const ForumPost = ({post: {title, icon, username, replyCount, viewCount, lastPos
   );
 }
 
-function Forum() {
-  const { T, locale } = useT();
+const ForumPageDefault = () => {
+  const { T } = useT();
+
+  return (
+    <div className='position-relative'>
+      <div className='forum-page-header'>
+        <div className='position-relative'>
+          <h2 className="forum-title">{T("forum.categories.general")} &nbsp; &gt; &nbsp; {T("forum.subforums.wiz-101")}</h2>
+          <div className='button-create-post links-generic'><a href={linkToCreatePost}>{T("forum.create-post.button")}</a></div>
+          <br />
+          <DetailRow />
+        </div>
+      </div>
+      <ForumPost post={samplePost}/>
+      <ForumPost post={samplePost}/>
+      <ForumPost post={samplePost}/>
+      <MessageDivision />
+    </div>
+  );
+};
+
+const ForumPageCreatePost = () => {
+  const { T } = useT();
+
+  return (
+    <div className='position-relative'>
+      <div className='forum-page-header'>
+        <div className='position-relative'>
+          <h2 className="forum-title">{T("forum.create-post.page-title")}</h2>
+          <div className='button-create-post links-generic'><a href={linkToForum}>{T("forum.create-post.cancel")}</a></div>
+          <br />
+        </div>
+      </div>
+      <div className='forum-create-post-container'>
+        <MessageDivision />
+        <div className='create-post-container'>
+          <TextLineFieldInput 
+            maxLength={titleLimit} 
+            caption={T("forum.create-post.title")}
+            placeholder={T("forum.create-post.title-placeholder")}/>
+        </div>
+        <MessageDivision />
+        <div className='create-post-container'>
+          <TextFieldInput 
+            maxLength={titleLimit} 
+            caption={T("forum.create-post.text")}
+            placeholder={T("forum.create-post.text-placeholder")}/>
+        </div>
+        <MessageDivision />
+        <div className='create-post-container'>
+          <div className="post-button links-generic">
+            <a href={linkToForum}>Post</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+function Forum({doCreatePost}) {
+  const { T } = useT();
 
   return (
     <>
@@ -103,32 +168,32 @@ function Forum() {
         <div className='forum-sidebar'>
           <div className='forum-sidebar-container'>
 
-            <h1>{T("forum.categories")}</h1>
+            <h1>{T("forum.categories.title")}</h1>
 
             <Division />
 
-            <div className='forum-label'>General</div>
+            <div className='forum-label'>{T("forum.categories.general")}</div>
             <div className='forum-list-container'>
               <ul>
-                <li>Wiz 101</li>
-                <li>Spells</li>
-                <li>Orbs</li>
+                <li>{T("forum.subforums.wiz-101")}</li>
+                <li>{T("forum.subforums.spells")}</li>
+                <li>{T("forum.subforums.orbs")}</li>
               </ul>
             </div>
 
             <Division />
 
-            <div className='forum-label'>Schools</div>
+            <div className='forum-label'>{T("forum.categories.schools")}</div>
             <div className='forum-list-container'>
               <ul>
-                <li>Evocation</li>
-                <li>Conjuration</li>
-                <li>Illusion</li>
-                <li>Necromancy</li>
-                <li>Transmutation</li>
-                <li>Divination</li>
-                <li>Enchantment</li>
-                <li>Abjuration</li>
+                <li>{T("forum.subforums.evocation")}</li>
+                <li>{T("forum.subforums.conjuration")}</li>
+                <li>{T("forum.subforums.illusion")}</li>
+                <li>{T("forum.subforums.necromancy")}</li>
+                <li>{T("forum.subforums.transmutation")}</li>
+                <li>{T("forum.subforums.divination")}</li>
+                <li>{T("forum.subforums.enchantment")}</li>
+                <li>{T("forum.subforums.abjuration")}</li>
               </ul>
             </div>
 
@@ -136,18 +201,10 @@ function Forum() {
         </div>
         <div className='vertical-line'></div>
         <div className='forum-main'>
-          <div style={{position: 'absolute'}}><NavUnder items={forumMainNav} /></div>
           
           <div className="forum-page">
-            <div className='forum-page-header'>
-              <h2 className="forum-title">General : Wiz101</h2>
-              <br />
-              <DetailRow />
-            </div>
-              <ForumPost post={samplePost}/>
-              <ForumPost post={samplePost}/>
-              <ForumPost post={samplePost}/>
-              <MessageDivision />
+            {!doCreatePost && <ForumPageDefault/>}
+            {doCreatePost && <ForumPageCreatePost/>}
           </div>
         </div>
       </div>

@@ -59,6 +59,20 @@ textarea {
   outline: none;
 }
 
+.textline {
+  resize: none;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: transparent;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
 .char-counter {
   font-size: 16px;
   font-weight: bold;

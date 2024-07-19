@@ -1,8 +1,11 @@
 export const fr = {
-  "title":"Société des Mages\nSages",
-  "subtitle": {
-    "first": "Maîtriser l'Arcane,",
-    "second": "Préserver l'Ordre..."
+  "titles": {
+    "home": "Société des Mages\nSages",
+    "subtitle": {
+      "first": "Maîtriser l'Arcane,",
+      "second": "Préserver l'Ordre..."
+    },
+    "wizard-forum": "Forum des\nMages",
   },
   "language-label": "Langues: ",
     "page": {
@@ -34,6 +37,7 @@ export const fr = {
   "other": {
     "search": "Chercher",
     "sample-news": "La foudre frappes 60 fois sur les Collines Glumbo Est. Les mages policiers investigues...  ",
+    "characters-remaining": " caractères restants",
   },
   "adverts": {
     "home1-title": "Non-utilisateur de magie?",
@@ -70,6 +74,42 @@ export const fr = {
       "rent-a-wizard": "Louer un Mage",
       "forum": "Forum des Mages"
     },
-    
+  },
+  "forum" : {
+    "categories": {
+      "title": "Catégories >>",
+      "general": "Géneral",
+      "schools": "Écoles"
+    },
+    "subforums": {
+      "wiz-101": "Mages 101",
+      "spells": "Sortilèges",
+      "orbs": "Boules magiques",
+      "evocation":"Évocation",
+      "conjuration":"Invocation",
+      "illusion":"Illusion",
+      "necromancy":"Nécromancie",
+      "transmutation":"Transmutation",
+      "divination":"Divination",
+      "enchantment":"Enchantment",
+      "abjuration":"Abjuration"
+    },
+    "details" : {
+      "subject-started": "Sujet / Commencé By",
+      "replies-views": "Réponses / Vues",
+      "last-post": "Dernier Message",
+      "replies": "Réponses :  ",
+      "views": "Vues : ",
+      "by": "par "
+    },
+    "create-post": {
+      "button": "Créer un Post",
+      "cancel": "Annuler",
+      "page-title": "Créer un Post",
+      "title": "Titre du Post",
+      "title-placeholder": "Écrivez un titre intéressant.",
+      "text": "Contenu du Post",
+      "text-placeholder": "Dites-nous ce que vous pensez."
+    }
   }
 };

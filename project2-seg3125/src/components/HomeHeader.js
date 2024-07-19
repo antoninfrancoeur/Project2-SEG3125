@@ -14,10 +14,10 @@ function HomeHeader() {
     <div>
       <div className="Header">
         <div className="Header-Left">
-            <h1 className="Title">{T("title")}</h1>
+            <h1 className="Title">{T("titles.home")}</h1>
             <div className="Subtitle-Box">
-                <span className="Header-Subtitle Top">{T("subtitle.first")}<br /></span>
-                <span className="Header-Subtitle Bottom">{T("subtitle.second")}</span>
+                <span className="Header-Subtitle Top">{T("titles.subtitle.first")}<br /></span>
+                <span className="Header-Subtitle Bottom">{T("titles.subtitle.second")}</span>
             </div>
             <div className="Header-Nav">
                 <Nav items={pageHomeNav} />

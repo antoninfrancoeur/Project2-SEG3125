@@ -1,56 +1,83 @@
 import Header from "../components/Header";
-import { pageShop, crystalFilters, linkToShop } from "../data";
-import { crystalBallsItems } from "../shop_data";
-import {ShopAdvert1} from '../page-components/Adverts'
+import { pageShop, linkToShop } from "../data";
+import { crystalBallsItems, crystalFilters } from "../shop_data";
+import { ShopAdvert1 } from '../page-components/Adverts';
 import Footer from "../components/Footer";
 import ShopHeader from "../page-components/ShopHeader";
-import React, { useState } from 'react';
-import crystal_img from'../assets/crystal_ball_icon.jpg'
-const title = "The Enchanted \nEmporium"
+import React, { useState, useMemo } from 'react';
+import crystal_img from '../assets/crystal_ball_icon.jpg';
+const title = "The Enchanted \nEmporium";
 
-const ShopItem = ({item}) => {
+const ShopItem = ({ item }) => {
   return (
-    <>
-      <div className="shop-item-card">
-        <img className="shop-item-card-bg" src={crystal_img} alt=""/>
-        <div className="shop-item-card-overlay">
-          <div>
-            <p className="shop-item-title">{item.title}</p>
-            <p className="shop-item-label">{item.description}</p>
-          </div>
-          <div className="flex-space">
-            <span className="shop-item-price">{item.price} coins</span>
-            <span className="shop-item-btn links-generic"><a href={linkToShop}>Buy now &gt;&gt;</a></span>
-          </div>
+    <div className="shop-item-card">
+      <img
+        className="shop-item-card-bg"
+        src={crystal_img}
+        alt=""
+        style={{ filter: `hue-rotate(${item.color}turn)` }}
+      />
+      <div className="shop-item-card-overlay">
+        <div>
+          <p className="shop-item-title">{item.title}</p>
+          <p className="shop-item-label">{item.description}</p>
+        </div>
+        <div className="flex-space">
+          <span className="shop-item-price">{item.price} coins</span>
+          <span className="shop-item-btn links-generic"><a href={linkToShop}>Buy now &gt;&gt;</a></span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-const ShopFilter = ({ filter }) => {
+const ShopFilter = ({ filter, checkedItems, handleCheckboxChange, handleCheckAll, handleClearAll }) => (
+  <div className="shop-filter">
+    <span className="shop-option-label">{filter.name}</span>
+    {filter.items.map((item, index) => (
+      <React.Fragment key={index}>
+        <br />
+        <input
+          type="checkbox"
+          id={item[1]}
+          checked={checkedItems[item[1]]}
+          onChange={() => handleCheckboxChange(item[1])}
+        />
+        <label htmlFor={item[1]}>{item[0]}</label>
+      </React.Fragment>
+    ))}
+    <div className="shop-icon-container">
+      <div className="shop-icon" onClick={() => handleCheckAll(filter.items)}>
+        <span className="material-symbols-rounded">done_all</span>
+      </div>
+      <div className="shop-icon" onClick={() => handleClearAll(filter.items)}>
+        <span className="material-symbols-rounded">close</span>
+      </div>
+    </div>
+  </div>
+);
+
+const ShopFilters = ({ filters, checkedItems, handleCheckboxChange, handleCheckAll, handleClearAll }) => (
+  filters.map((filter, index) => (
+    <React.Fragment key={index}>
+      <ShopFilter
+        filter={filter}
+        checkedItems={checkedItems}
+        handleCheckboxChange={handleCheckboxChange}
+        handleCheckAll={handleCheckAll}
+        handleClearAll={handleClearAll}
+      />
+    </React.Fragment>
+  ))
+);
+
+function Shop() {
   const [checkedItems, setCheckedItems] = useState(
-    filter.items.reduce((acc, item) => {
-      acc[item[1]] = true;
+    crystalFilters.reduce((acc, filter) => {
+      filter.items.forEach(item => acc[item[1]] = true);
       return acc;
     }, {})
   );
-
-  const handleCheckAll = () => {
-    const newCheckedItems = {};
-    filter.items.forEach(item => {
-      newCheckedItems[item[1]] = true;
-    });
-    setCheckedItems(newCheckedItems);
-  };
-
-  const handleClearAll = () => {
-    const newCheckedItems = {};
-    filter.items.forEach(item => {
-      newCheckedItems[item[1]] = false;
-    });
-    setCheckedItems(newCheckedItems);
-  };
 
   const handleCheckboxChange = (id) => {
     setCheckedItems(prevState => ({
@@ -59,62 +86,51 @@ const ShopFilter = ({ filter }) => {
     }));
   };
 
-  return (
-    <div className="shop-filter">
-      <span className="shop-option-label">{filter.name}</span>
-      {filter.items.map((item, index) => (
-        <React.Fragment key={index}>
-          <div>
-            <input
-              type="checkbox"
-              id={item[1]}
-              checked={checkedItems[item[1]]}
-              onChange={() => handleCheckboxChange(item[1])}
-            />
-            <label htmlFor={item[1]}>{item[0]}</label>
-          </div>
-        </React.Fragment>
-      ))}
-      <div className="shop-icon-container">
-        <div className="shop-icon" onClick={handleCheckAll}>
-          <span className="material-symbols-rounded">done_all</span>
-        </div>
-        <div className="shop-icon" onClick={handleClearAll}>
-          <span className="material-symbols-rounded">close</span>
-        </div>
-      </div>
-    </div>
-  );
-};
+  const handleCheckAll = (items) => {
+    setCheckedItems(prevState => {
+      const newCheckedItems = { ...prevState };
+      items.forEach(item => {
+        newCheckedItems[item[1]] = true;
+      });
+      return newCheckedItems;
+    });
+  };
 
-const ShopFilters = ({filters}) => filters.map((filter, index) => (
-  <React.Fragment key={index}>
-    <ShopFilter filter={filter} />
-  </React.Fragment>
-));
+  const handleClearAll = (items) => {
+    setCheckedItems(prevState => {
+      const newCheckedItems = { ...prevState };
+      items.forEach(item => {
+        newCheckedItems[item[1]] = false;
+      });
+      return newCheckedItems;
+    });
+  };
 
-function Shop() {
+  const filteredItems = useMemo(() => {
+    return crystalBallsItems.filter(item =>
+      item.tags.every(tag => checkedItems[tag])
+    );
+  }, [checkedItems]);
+
   return (
     <>
-      <Header nav_items={pageShop} title={title}/>
+      <Header nav_items={pageShop} title={title} />
       <ShopHeader />
       <ShopAdvert1 />
       <div className="shop">
         <form className="shop-siderbar">
-          <ShopFilters filters={crystalFilters} />
+          <ShopFilters
+            filters={crystalFilters}
+            checkedItems={checkedItems}
+            handleCheckboxChange={handleCheckboxChange}
+            handleCheckAll={handleCheckAll}
+            handleClearAll={handleClearAll}
+          />
         </form>
         <div className="shop-container">
-          <ShopItem item={crystalBallsItems[0]} />
-          <ShopItem item={crystalBallsItems[1]} />
-          <ShopItem item={crystalBallsItems[0]} />
-          <ShopItem item={crystalBallsItems[0]} />
-          <ShopItem item={crystalBallsItems[0]} />
-          <ShopItem item={crystalBallsItems[0]} />
-          <ShopItem item={crystalBallsItems[0]} />
-          <ShopItem item={crystalBallsItems[0]} />
-          <ShopItem item={crystalBallsItems[0]} />
-          <ShopItem item={crystalBallsItems[0]} />
-          <ShopItem item={crystalBallsItems[0]} />
+          {filteredItems.map((item, index) => (
+            <ShopItem key={index} item={item} />
+          ))}
         </div>
       </div>
       <Footer />
@@ -123,4 +139,3 @@ function Shop() {
 }
 
 export default Shop;
-  

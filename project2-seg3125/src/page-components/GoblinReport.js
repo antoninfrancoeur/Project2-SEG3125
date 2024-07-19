@@ -1,7 +1,7 @@
 import '../pages/Pages.css';
 import './Maps.css';
 import DateTimeInput from '../components/DateTimeInput';
-import TextFieldInput from '../components/TextFieldInput';
+import {TextFieldInput} from '../components/TextFieldInput';
 const detailsLimit = 800;
 
 const Page0 = () => {
@@ -72,7 +72,10 @@ const Page4 = () => {
       <h1 className="report-title">Report Goblin Sighting</h1>
       <h2 className='report-title'>Step 4 : Confirm the details.</h2>
       <form>
-        <TextFieldInput maxLength={detailsLimit}/>
+        <TextFieldInput 
+          maxLength={detailsLimit} 
+          caption={"Give us more detail about your encounter."} 
+          placeholder={"What were they carrying? Did they see you? Have you noticed them multiple time?"}/>
       </form>
     </>
   );

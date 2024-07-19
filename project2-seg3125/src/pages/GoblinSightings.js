@@ -27,9 +27,9 @@ function GoblinSightings() {
   const lastButtonRow = () => {
     if(index > 0 && index <= maxPage) {
       return (
-        <div className="report-button" onClick={lastPage}>
-          <span>Previous</span>
-        </div>
+        <button className="report-button links-generic" tabindex='0' onClick={lastPage}>
+          Previous
+        </button>
       );
     }
     else {
@@ -40,22 +40,22 @@ function GoblinSightings() {
   const nextButtonRow = () => {
     if(index < maxPage) {
       return (
-        <div className="report-button" onClick={nextPage}>
-          <span>Next</span>
-        </div>
+        <button className="report-button links-generic" tabindex='0' onClick={nextPage}>
+          Next
+        </button>
       );
     }
     else if(index === maxPage) {
       return (
-        <div className="report-button" onClick={submit}>
-          <span>Submit</span>
-        </div>
+        <button className="report-button links-generic" onClick={submit}>
+          Submit
+        </button>
       );
     }
     else if(index > maxPage) {
       return (
-        <div className="report-button">
-          <a href={linkToHome}><span>Return to home page.</span></a>
+        <div className="report-button links-generic">
+          <a href={linkToHome}>Return to home page.</a>
         </div>
       );
     }

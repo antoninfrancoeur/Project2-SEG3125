@@ -1,8 +1,11 @@
 export const pirate = {
-  "title":"Society o' Wise\nWizs",
-  "subtitle": {
-    "first": "Shakin' the seas,",
-    "second": "Plunderin' the foes..."
+  "titles": {
+    "home": "Society o' Wise\nWizs",
+    "subtitle": {
+      "first": "Shakin' the seas,",
+      "second": "Plunderin' the foes..."
+    },
+    "wizard-forum": "The Wiz\nParley",
   },
   "language-label": "Tongue: ",
   "page": {
@@ -34,6 +37,7 @@ export const pirate = {
   "other": {
     "search": "Search",
     "sample-news": "MATEYY!!! TIME TO COLLECT SOME BOOTEY!!! 🤑🤑 HEAD ON TO WIZGAMBLE.COM NOW !! ",
+    "characters-remaining": " characters remaining",
   },
   "adverts": {
     "home1-title": "Landlubber?",
@@ -68,7 +72,44 @@ export const pirate = {
       "warlock-incident": "Dark Magic n' Warlock Incidents",
       "enchanted-emporium": "The Pirate Bay",
       "rent-a-wizard": "Hire a Wiz",
-      "forum": "Parley"
+      "forum": "The Wiz Parley"
+    }
+  },
+  "forum" : {
+    "categories": {
+      "title": "Categories >>",
+      "general": "General",
+      "schools": "Schools"
+    },
+    "subforums": {
+      "wiz-101": "Wiz 101",
+      "spells": "Spells",
+      "orbs": "Orbs",
+      "evocation":"Manipulate stuff",
+      "conjuration":"Create critters",
+      "illusion":"Fake stuff",
+      "necromancy":"Skull n' Bones magic",
+      "transmutation":"Transmutation",
+      "divination":"Change stuff",
+      "enchantment":"Make stuff stronger",
+      "abjuration":"Defend stuff"
+    },
+    "details" : {
+      "subject-started": "Subject / Matey",
+      "replies-views": "Replies / Views",
+      "last-post": "Last Post",
+      "replies": "Replies: ",
+      "views": "Views: ",
+      "by": "by "
+    },
+    "create-post": {
+      "button": "Create Post",
+      "cancel": "Cancel",
+      "page-title": "Create Post",
+      "title": "Post Title",
+      "title-placeholder": "Write an interestin' title.",
+      "text": "Post Content",
+      "text-placeholder": "Tell us what ye're thinkin' about."
     }
   }
 };

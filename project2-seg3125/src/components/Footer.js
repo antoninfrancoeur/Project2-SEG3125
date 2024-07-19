@@ -8,7 +8,7 @@ function Footer() {
 
   return (
     <>
-      <div className="horizontal-line"></div>
+      <div className="Horizontal-Line"></div>
       <footer>
         <div className='footer-fixed-width'>
           <NavStyle items={footerNav} type={"style3"}/>

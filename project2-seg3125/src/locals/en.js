@@ -4,11 +4,15 @@ const { T } = useT();
 */
 
 export const en = {
-  "title" : "Society of Wise\nWizards",
-  "subtitle": {
-    "first": "Mastering the Arcane,",
-    "second": "Preserving the Order..."
+  "titles": {
+    "home": "Society of Wise\nWizards",
+    "subtitle": {
+      "first": "Mastering the Arcane,",
+      "second": "Preserving the Order..."
+    },
+    "wizard-forum": "The Wizard\nForum",
   },
+  
   "language-label": "Languages: ",
   "page": {
     "title": "Society of Wise Wizard",
@@ -38,7 +42,8 @@ export const en = {
   },
   "other": {
     "search": "Search",
-    "sample-news": "Lightning strikes 60 times on Eastern Glumbo Hills. WWD Investigating. "
+    "sample-news": "Lightning strikes 60 times on Eastern Glumbo Hills. WWD Investigating. ",
+    "characters-remaining": " characters remaining",
   },
   "adverts": {
     "home1-title": "Non-Magic User?",
@@ -77,8 +82,23 @@ export const en = {
     }
   },
   "forum" : {
-    "sections" : {
-      
+    "categories": {
+      "title": "Categories >>",
+      "general": "General",
+      "schools": "Schools"
+    },
+    "subforums": {
+      "wiz-101": "Wiz 101",
+      "spells": "Spells",
+      "orbs": "Orbs",
+      "evocation":"Evocation",
+      "conjuration":"Conjuration",
+      "illusion":"Illusion",
+      "necromancy":"Necromancy",
+      "transmutation":"Transmutation",
+      "divination":"Divination",
+      "enchantment":"Enchantment",
+      "abjuration":"Abjuration"
     },
     "details" : {
       "subject-started": "Subject / Started By",
@@ -87,6 +107,15 @@ export const en = {
       "replies": "Replies: ",
       "views": "Views: ",
       "by": "by "
+    },
+    "create-post": {
+      "button": "Create Post",
+      "cancel": "Cancel",
+      "page-title": "Create Post",
+      "title": "Post Title",
+      "title-placeholder": "Write an interesting title.",
+      "text": "Post Content",
+      "text-placeholder": "Tell us what you're thinking about."
     }
   }
 };

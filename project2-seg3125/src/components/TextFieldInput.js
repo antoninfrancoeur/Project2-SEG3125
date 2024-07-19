@@ -1,28 +1,54 @@
 import React, { useState } from 'react';
 import './Inputs.css'
+import { useT } from "talkr";
 
-function TextFieldInput({ maxLength }) {
+export function TextFieldInput({ maxLength, caption, placeholder}) {
   const [text, setText] = useState('');
 
+  const { T } = useT();
   const handleTextChange = (event) => {
     setText(event.target.value);
   };
 
   return (
     <div className="textarea-container">
-      <p>Give us more detail about your encounter.</p>
+      <p>{caption}</p>
       <textarea
         className="textarea"
         value={text}
         onChange={handleTextChange}
         maxLength={maxLength}
-        placeholder="What were they carrying? Did they see you? Have you noticed them multiple time?"
+        placeholder={placeholder}
       />
       <div className="char-counter">
-        {maxLength - text.length} characters remaining
+        {maxLength - text.length} {T("other.characters-remaining")}
       </div>
     </div>
   );
 }
 
-export default TextFieldInput;
+export function TextLineFieldInput({ maxLength, caption, placeholder}) {
+  const [text, setText] = useState('');
+
+  const { T } = useT();
+  const handleTextChange = (event) => {
+    setText(event.target.value);
+  };
+
+  return (
+    <div className="textarea-container">
+      <p>{caption}</p>
+      <input
+        type='text'
+        className="textline"
+        value={text}
+        onChange={handleTextChange}
+        maxLength={maxLength}
+        placeholder={placeholder}
+      />
+      <div className="char-counter">
+        {maxLength - text.length} {T("other.characters-remaining")}
+      </div>
+    </div>
+  );
+}

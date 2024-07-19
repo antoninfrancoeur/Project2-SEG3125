@@ -3,13 +3,15 @@ import Header from "../components/Header";
 import Forum from '../page-components/Forum.js';
 import {pageForumNav} from '../data.js';
 import './Pages.css'
+import { useT } from "talkr";
 
-const title = "The Wizard \nForum";
-function WizardForum() {
+function WizardForum({doCreatePost}) {
+  const { T } = useT();
+
   return (
     <>
-      <Header nav_items={pageForumNav} title={title}/>
-      <Forum />
+      <Header nav_items={pageForumNav} title={T("titles.wizard-forum")}/>
+      <Forum doCreatePost={doCreatePost}/>
       <Footer />
     </>
   );

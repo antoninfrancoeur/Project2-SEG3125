@@ -75,47 +75,6 @@ export const shopSections = [
   }
 ];
 
-export const crystalFilters = [
-  {
-    'name':'Diameter',
-    "items": [
-      ['15 cm', '15-cm'],
-      ['18 cm', '18-cm'],
-      ['20 cm', '20-cm'],
-      ['22 cm', '22-cm'],
-      ['25 cm', '25-cm'],
-    ]
-  },
-  {
-    'name':'Crystal Type',
-    'items':[
-      ['Thaumatite', 'thaumatite'],
-      ['Yilaster', 'yilaster'],
-      ['Amisite', 'amisite'],
-      ['Infused Quartz', 'infused-quartz'],
-      ['Infused Obsidian', 'infused-obsidian'],
-    ]
-  },
-  {
-    'name':'Base Type',
-    'items':[
-      ['Old Oak', 'old-oak'],
-      ['Old Pine', 'old-pine'],
-      ['Maple', 'maple'],
-    ]
-  },
-  {
-    'name':'Aura',
-    'items':[
-      ['Chill', 'chill'],
-      ['Ominous', 'ominous'],
-      ['Spooky', 'spooky'],
-      ['Warm', 'warm'],
-      ['Freaky', 'freaky'],
-    ]
-  }
-];
-
 export const schoolsOfMagic = [
   ['Evocation','evocation'],
   ['Conjuration','conjuration'],
@@ -142,6 +101,7 @@ export const linkToHome = '/Project2-SEG3125/#/';
 export const linkToPortals = '/Project2-SEG3125/#/';
 export const linkToShop = '/Project2-SEG3125/#/shop/';
 export const linkToRentAWizard = '/Project2-SEG3125/#/';
-export const linkToRentForum = '/Project2-SEG3125/#/forum';
+export const linkToForum = '/Project2-SEG3125/#/forum';
+export const linkToCreatePost = '/Project2-SEG3125/#/forum/create-post';
 
 export const forumMainNav = [["forum", ''], ["main", '']];

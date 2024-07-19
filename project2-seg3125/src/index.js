@@ -25,7 +25,8 @@ root.render(
         <Route path='/shop/*' element={<Shop />} />
         <Route path='/safety/goblin-sightings' element={<GoblinSightings />} />
         <Route path='/knowledge/spell-archives' element={<SpellArchives />} />
-        <Route path='/forum' element={<WizardForum />} />
+        <Route path='/forum/create-post' element={<WizardForum doCreatePost={true}/>} />
+        <Route path='/forum/*' element={<WizardForum doCreatePost={false}/>} />
       </Routes>
     </HashRouter>
   </Talkr>

@@ -22,14 +22,7 @@
   overflow: hidden;
 }
 
-.vertical-line {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: black;
-  box-shadow: #3100007a 0 0 7px 0px;
-}
+
 
 .center-page {
   margin: 0 auto;
@@ -79,6 +72,8 @@ ol.report-list li::marker {
   display: flex;
   align-items: center;
   padding: 20px;
+  font-family: inherit;
+  border: none;
 }
 
 .report-button > a {
