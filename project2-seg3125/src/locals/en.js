@@ -50,5 +50,43 @@ export const en = {
     "shop1-title": "In need of a new Crystal ball?",
     "shop1-1": "We forage only the purest crystals, with best wood one can get in these lands.",
     "shop1-2": "Pick the crystal ball best suited for you using our various filters."
+  },
+  "portals": {
+    "portal": "Portals",
+    "categories": {
+      "order": "Order",
+      "knowledge": "Knowledge",
+      "safety": "Safety",
+      "business": "Business",
+      "community": "Community"
+    },
+    "items" : {
+      "see-more": "See more...",
+      "high-concil": "Wizard High Council",
+      "edicts-repo": "Edicts Repository",
+      "oaths-repo": "Oaths Repository",
+      "wizard-academy": "Wizard Academy",
+      "spell-archive": "Spell Archive",
+      "spell-research": "Spell Research & Publishing",
+      "goblin-sightings": "Goblin Sightings",
+      "report-forbidden": "Report Forbidden Acts",
+      "warlock-incident": "Warlock & Black Magic Incidents",
+      "enchanted-emporium": "Enchanted Emporium",
+      "rent-a-wizard": "Rent a Wizard",
+      "forum": "Wizard Forum",
+    }
+  },
+  "forum" : {
+    "sections" : {
+      
+    },
+    "details" : {
+      "subject-started": "Subject / Started By",
+      "replies-views": "Replies / Views",
+      "last-post": "Last Post",
+      "replies": "Replies: ",
+      "views": "Views: ",
+      "by": "by "
+    }
   }
 };

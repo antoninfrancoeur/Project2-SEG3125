@@ -17,7 +17,7 @@ export const fr = {
     "business-concil": "Conseil d'Affaires",
     "shop": "Boutique",
     "safety": "Sécurité",
-    "goblin-sightings": "Observations de Gobelins",
+    "goblin-sightings": "Appartitions de Gobelins",
     "report": "Rapport",
     "report-bug": "Signaler un Bug",
     "report-abuse": "Signaler un Abus",
@@ -45,5 +45,31 @@ export const fr = {
     "shop1-title": "Besoin d'une nouvelle boule de cristal?",
     "shop1-1": "Nous ne ramassons que les cristaux les plus purs, avec le meilleur bois que l'on puisse trouver dans ces terres.",
     "shop1-2": "Choisissez la boule de cristal qui vous convient le mieux en utilisant nos divers filtres."
+  },
+  "portals": {
+    "portal": "Portails",
+    "categories": {
+      "order": "Ordre",
+      "knowledge": "Connaissance",
+      "safety": "Sécurité",
+      "business": "Affaires",
+      "community": "Communauté"
+    },
+    "items" : {
+      "see-more": "Voir plus...",
+      "high-concil": "Haut Conseil des Sorciers",
+      "edicts-repo": "Répertoire des Édits",
+      "oaths-repo": "Répertoire des Serments",
+      "wizard-academy": "Académie des Sorciers",
+      "spell-archive": "Archives des Sortilèges",
+      "spell-research": "Recherche et Publication des Sortilèges",
+      "goblin-sightings": "Appartitions de Gobelins",
+      "report-forbidden": "Signaler des Actes Interdits",
+      "warlock-incident": "Incidents de Magie Noire et Sorcellerie",
+      "enchanted-emporium": "Emporium Enchanté",
+      "rent-a-wizard": "Louer un Mage",
+      "forum": "Forum des Mages"
+    },
+    
   }
 };

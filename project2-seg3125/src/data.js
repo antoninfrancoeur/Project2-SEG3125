@@ -1,49 +1,49 @@
 export const homePortalSections = [
   {
-    "name": "Order",
+    "name": "portals.categories.order",
     "icon": "gavel",
     "items": [
-      ['Wizard High Council', '/Project2-SEG3125/#/'],
-      ['Edicts Repository', '/Project2-SEG3125/#/'],
-      ['Oaths Repository', '/Project2-SEG3125/#/'],
-      ['See more...', '/Project2-SEG3125/#/'],
+      ['portals.items.high-concil', '/Project2-SEG3125/#/'],
+      ['portals.items.edicts-repo', '/Project2-SEG3125/#/'],
+      ['portals.items.oaths-repo', '/Project2-SEG3125/#/'],
+      ['portals.items.see-more', '/Project2-SEG3125/#/'],
     ]
   },
   {
-    "name": "Knowledge",
+    "name": "portals.categories.knowledge",
     "icon": "school",
     "items": [
-      ['Wizard Academy', '/Project2-SEG3125/#/'],
-      ['Spell Archive', '/Project2-SEG3125/#/knowledge/spell-archives'],
-      ['Spell Research & Publishing', '/Project2-SEG3125/#/'],
-      ['See more...', '/Project2-SEG3125/#/'],
+      ['portals.items.wizard-academy', '/Project2-SEG3125/#/'],
+      ['portals.items.spell-archive', '/Project2-SEG3125/#/knowledge/spell-archives'],
+      ['portals.items.spell-research', '/Project2-SEG3125/#/'],
+      ['portals.items.see-more', '/Project2-SEG3125/#/'],
     ]
   },
   {
-    "name": "Safety",
+    "name": "portals.categories.safety",
     "icon": "security",
     "items": [
-      ['Goblin Sightings', '/Project2-SEG3125/#/safety/goblin-sightings'],
-      ['Report Forbidden Acts', '/Project2-SEG3125/#/'],
-      ['Warlock & Black Magic Incidents', '/Project2-SEG3125/#/'],
-      ['See more...', '/Project2-SEG3125/#/'],
+      ['portals.items.goblin-sightings', '/Project2-SEG3125/#/safety/goblin-sightings'],
+      ['portals.items.report-forbidden', '/Project2-SEG3125/#/'],
+      ['portals.items.warlock-incidents', '/Project2-SEG3125/#/'],
+      ['portals.items.see-more', '/Project2-SEG3125/#/'],
     ]
   },
   {
-    "name": "Business",
+    "name": "portals.categories.business",
     "icon": "account_balance",
     "items": [
-      ['Enchanted Emporium', '/Project2-SEG3125/#/shop/'],
-      ['Rent a Wizard', '/Project2-SEG3125/#/'],
-      ['See more...', '/Project2-SEG3125/#/'],
+      ['portals.items.enchanted-emporium', '/Project2-SEG3125/#/shop/'],
+      ['portals.items.rent-a-wizard', '/Project2-SEG3125/#/'],
+      ['portals.items.see-more', '/Project2-SEG3125/#/'],
     ]
   },
   {
-    "name": "Community",
+    "name": "portals.categories.community",
     "icon": "forum",
     "items": [
-      ['Wizard Forum', '/Project2-SEG3125/#/forum'],
-      ['See more...', '/Project2-SEG3125/#/'],
+      ['portals.items.forum', '/Project2-SEG3125/#/forum'],
+      ['portals.items.see-more', '/Project2-SEG3125/#/'],
     ]
   }
 ];
