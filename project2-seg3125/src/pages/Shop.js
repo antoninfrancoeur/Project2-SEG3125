@@ -31,7 +31,7 @@ const ShopItem = ({ item }) => {
   );
 };
 
-const ShopFilter = ({ filter, checkedItems, handleCheckboxChange, handleCheckAll, handleClearAll }) => (
+const ShopFilter = ({ filter, checkedItems, handleCheckboxChange, handleCheckAll, handleClearAll, impactMap }) => (
   <div className="shop-filter">
     <span className="shop-option-label">{filter.name}</span>
     {filter.items.map((item, index) => (
@@ -43,7 +43,12 @@ const ShopFilter = ({ filter, checkedItems, handleCheckboxChange, handleCheckAll
           checked={checkedItems[item[1]]}
           onChange={() => handleCheckboxChange(item[1])}
         />
-        <label htmlFor={item[1]}>{item[0]}</label>
+        <label
+          htmlFor={item[1]}
+          style={{ color: impactMap[item[1]] ? 'inherit' : '#ababab' }}
+        >
+          {item[0]}
+        </label>
       </React.Fragment>
     ))}
     <div className="shop-icon-container">
@@ -57,7 +62,7 @@ const ShopFilter = ({ filter, checkedItems, handleCheckboxChange, handleCheckAll
   </div>
 );
 
-const ShopFilters = ({ filters, checkedItems, handleCheckboxChange, handleCheckAll, handleClearAll }) => (
+const ShopFilters = ({ filters, checkedItems, handleCheckboxChange, handleCheckAll, handleClearAll, impactMap }) => (
   filters.map((filter, index) => (
     <React.Fragment key={index}>
       <ShopFilter
@@ -66,6 +71,7 @@ const ShopFilters = ({ filters, checkedItems, handleCheckboxChange, handleCheckA
         handleCheckboxChange={handleCheckboxChange}
         handleCheckAll={handleCheckAll}
         handleClearAll={handleClearAll}
+        impactMap={impactMap}
       />
     </React.Fragment>
   ))
@@ -112,6 +118,20 @@ function Shop() {
     );
   }, [checkedItems]);
 
+  const impactMap = useMemo(() => {
+    const map = {};
+    crystalFilters.forEach(filter => {
+      filter.items.forEach(item => {
+        const testCheckedItems = { ...checkedItems, [item[1]]: !checkedItems[item[1]] };
+        const filteredTestItems = crystalBallsItems.filter(testItem =>
+          testItem.tags.every(tag => testCheckedItems[tag])
+        );
+        map[item[1]] = filteredTestItems.length !== filteredItems.length;
+      });
+    });
+    return map;
+  }, [checkedItems, filteredItems]);
+
   return (
     <>
       <Header nav_items={pageShop} title={title} />
@@ -125,6 +145,7 @@ function Shop() {
             handleCheckboxChange={handleCheckboxChange}
             handleCheckAll={handleCheckAll}
             handleClearAll={handleClearAll}
+            impactMap={impactMap}
           />
         </form>
         <div className="shop-container">

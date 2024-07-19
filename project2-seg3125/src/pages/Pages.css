@@ -34,6 +34,27 @@
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
   font-size: 20px;
+  width: 100%;
+}
+
+.analytics-center-page {
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 40px;
+  box-sizing: border-box;
+  max-width: 800px;
+  background-color: #F0EAE6;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.analytics-label {
+  font-weight: bold;
 }
 
 .report-title {

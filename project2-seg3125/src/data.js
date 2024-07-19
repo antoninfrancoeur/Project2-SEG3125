@@ -100,6 +100,7 @@ export const pageForumNav = [["home", '/Project2-SEG3125/#/'], ["community", '/P
 export const linkToHome = '/Project2-SEG3125/#/';
 export const linkToPortals = '/Project2-SEG3125/#/';
 export const linkToShop = '/Project2-SEG3125/#/shop/';
+export const linkToShopAnalytics = '/Project2-SEG3125/#/shop/analytics';
 export const linkToRentAWizard = '/Project2-SEG3125/#/';
 export const linkToForum = '/Project2-SEG3125/#/forum';
 export const linkToCreatePost = '/Project2-SEG3125/#/forum/create-post';

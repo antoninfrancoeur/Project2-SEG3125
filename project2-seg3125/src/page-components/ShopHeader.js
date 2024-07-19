@@ -1,5 +1,5 @@
 import './ShopHeader.css';
-import {shopSections} from '../data.js';
+import {shopSections, linkToShopAnalytics} from '../data.js';
 import React from 'react';
 
 const CategoryDropdown = ({section}) => {
@@ -33,6 +33,10 @@ function ShopHeader() {
               </React.Fragment>
             ))}
           </div>
+        </div>
+        <div className="shop-header-hint">
+          <p><b>Debugging Only</b></p>
+          <p>Reach the analytics page by <a href={linkToShopAnalytics}>clicking here</a>.</p>
         </div>
         <div className="shop-header-hint">
           <p><b>Need help?</b></p>
