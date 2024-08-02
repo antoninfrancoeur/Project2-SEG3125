@@ -27,9 +27,9 @@ const LanguageDropdown = () => {
           {options[locale]} <i className="material-symbols-rounded">keyboard_arrow_down</i>
         </div>
         <div className="language-dropdown-content">
-          <div onClick={() => handleChangeLanguage('en')}>{options.en}</div>
-          <div onClick={() => handleChangeLanguage('pirate')}>{options.pirate}</div>
-          <div onClick={() => handleChangeLanguage('fr')}>{options.fr}</div>
+          <div onClick={() => handleChangeLanguage('en')} tabIndex={0}>{options.en}</div>
+          <div onClick={() => handleChangeLanguage('pirate')} tabIndex={0}>{options.pirate}</div>
+          <div onClick={() => handleChangeLanguage('fr')} tabIndex={0}>{options.fr}</div>
         </div>
       </div>
     </div>

@@ -46,14 +46,14 @@ export const crystalBallsItems = [
     description: "RGB Lit, 15 cm Thaumatite. Gives off chill vibes. Sourced from the Northern Elder Elves Mine.",
     price: 245.0,
     color: 1 / 20,
-    tags: ['15-cm', 'chill', 'old-pine', 'ominous']
+    tags: ['15-cm', 'thaumatite', 'chill', 'old-pine']
   },
   {
     title: "Ultimate Ominous Hyper Ball",
     description: "20 cm. Infused Obsidian for all your wizardly needs. Nobody knows where it came from.",
     price: 245.0,
     color: 2 / 20,
-    tags: ['20-cm', 'ominous', 'old-oak', 'spooky']
+    tags: ['20-cm', 'infused-obsidian', 'old-oak', 'spooky']
   },
   {
     title: "The Wizard's Favorite Chill Sphere",

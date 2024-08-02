@@ -16,8 +16,8 @@ function HomeHeader() {
         <div className="Header-Left">
             <h1 className="Title">{T("titles.home")}</h1>
             <div className="Subtitle-Box">
-                <span className="Header-Subtitle Top">{T("titles.subtitle.first")}<br /></span>
-                <span className="Header-Subtitle Bottom">{T("titles.subtitle.second")}</span>
+                <span className="Header-Subtitle Top" aria-hidden="true">{T("titles.subtitle.first")}<br /></span>
+                <span className="Header-Subtitle Bottom" aria-hidden="true">{T("titles.subtitle.second")}</span>
             </div>
             <div className="Header-Nav">
                 <Nav items={pageHomeNav} />

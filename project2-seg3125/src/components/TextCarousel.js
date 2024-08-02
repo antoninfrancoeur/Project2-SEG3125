@@ -27,9 +27,9 @@ const TextCarousel = ({ text }) => {
   return (
     <div className="carousel-container">
       <div className="carousel-content" ref={textRef} style={{ '--translateX': `${translateX}px` }}>
-        <span>{text}</span>
-        <span>{text}</span>
-        <span>{text}</span>
+        <span aria-hidden="true">{text}</span>
+        <span aria-hidden="true">{text}</span>
+        <span aria-hidden="true">{text}</span>
       </div>
     </div>
   );

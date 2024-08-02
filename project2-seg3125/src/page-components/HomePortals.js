@@ -17,7 +17,7 @@ const PortalRowInstance = ({ name, icon, items }) => {
   return (
     <div className='portal-row'>
       <div className='panel-left'>
-        <div className='panel-label'>{T(name)}</div>
+        <div className='panel-label' tabIndex={0}>{T(name)}</div>
         <i className="material-symbols-rounded panel-icon">{icon}</i>
       </div>
       <div className='panel-right'>
